@@ -1,7 +1,7 @@
 import TestFilters from '../support/filterTests.js'
 
 TestFilters([], () => {
-    
+
     describe('BBC Weather Homepage', () => {
         it('Should load the weather homepage successfully', () => {
           cy.visit('https://www.bbc.co.uk/weather');
@@ -67,7 +67,7 @@ TestFilters([], () => {
           cy.contains('°C').should('be.visible');  // Celsius should be visible by default
           cy.contains('Change to Fahrenheit').click();  // Click to change unit
           cy.contains('°F').should('be.visible');  // Validate Fahrenheit appears
-        });
+        });  
     });
 
     describe('Hourly Forecast Section', () => {
